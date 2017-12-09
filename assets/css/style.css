@@ -1,0 +1,30 @@
+.header-background {
+    height: 400px;
+    width: 100%;
+}
+
+.top-area {
+    background-color: #b4ddc5;
+    height: 400px;
+    width: 100%;
+}
+
+.jumbo {
+    position: relative;
+    text-align: center;
+}
+
+.info-text {
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#product-search {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
