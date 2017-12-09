@@ -1,6 +1,8 @@
 //ebay
-$("#submit-button").on("click", function(e) {
+$("#submit-button").on("click", function(e) 
+{
 		e.preventDefault();
+		$('.ebay-result').empty();
 
 		var productSearch = $("#video-search").val().trim();
 		var myAppID = "MichaelD-CodingBo-PRD-b51ca6568-036a5a77"	
@@ -16,6 +18,22 @@ $("#submit-button").on("click", function(e) {
 		})
 		.done(function(response) {
 		  //append to ebay column
-		  console.log(response);
+			console.log(response);
+
+		  	for (var i = 0; i < 10; i++) 
+		  	{
+				if(response.Product[i].DisplayStockPhotos === true) 
+				{
+					var ebayPic = $('<img>');
+					ebayPic.attr('src', response.Product[i].StockPhotoURL);
+					ebayPic.attr('height', '200px')
+					var ebayTitle = $('<span>'+response.Product[i].Title + '</span><br />');
+					var ebayTarget = $('<a href='+response.Product[i].DetailsURL+' target=_blank>More Details</a>')
+
+					console.log(ebayPic);
+
+		  			$('.ebay-result').append(ebayPic, ebayTitle, ebayTarget)
+		  		}		
+		  	};
 		});
-	  });
+});
