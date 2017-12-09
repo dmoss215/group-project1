@@ -1,3 +1,5 @@
+$(function() {
+
 // Initialize Firebase
 	var config = {
 		apiKey: "AIzaSyCUE8vxN9tFrV5spAnE3AvkWPYNA-ai24k",
@@ -17,6 +19,10 @@
 
 	// 	database.push()
 	// });
+
+// =====  Modal Open =============
+$('#modal1').modal('open');
+$('.modal').modal();
 
 //firebase authentication
 
@@ -68,3 +74,5 @@ $('#signOut-button').on('click', function () {
 //firebase
 	//login firebase script
 	//user-specific search history script
+
+});
