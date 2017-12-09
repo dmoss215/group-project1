@@ -24,9 +24,10 @@ $(function() {
 $('.modal').modal();
 
 //firebase authentication
-
-var emailOffered = $('#email-input').val();
-var passwordOffered = $('#password-input').val();
+var email;
+var password;
+var emailOffered = $('#email-input').val().trim();
+var passwordOffered = $('#password-input').val().trim();
 
 //firebase auth listener
 firebase.auth().onAuthStateChanged(function(user) {
@@ -48,6 +49,8 @@ $('#register-button').on('click', function(){
 $('#login-button').on('click', function(){
 	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
   	// Handle Errors here.
+  	email = emailOffered;
+  	password = passwordOffered;
   	var errorCode = error.code;
   	var errorMessage = error.message;
   	// ...
