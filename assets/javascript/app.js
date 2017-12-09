@@ -21,7 +21,6 @@ $(function() {
 	// });
 
 // =====  Modal Open =============
-$('#modal1').modal('open');
 $('.modal').modal();
 
 //firebase authentication
