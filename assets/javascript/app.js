@@ -23,6 +23,9 @@ $(function() {
 // =====  Modal Open =============
 $('.modal').modal();
 
+// ===== Collapse Navbar ========
+$(".button-collapse").sideNav();
+
 //firebase authentication
 var email;
 var password;

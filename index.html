@@ -3,42 +3,82 @@
 
 <head>
 	<title>Group Project #1</title>
-	<!-- Compiled and minified CSS -->
+	<!--  Materialize Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<!-- Materialize Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+
 	<nav>
 		<div class="nav-wrapper">
-			<a href="index.html" class="brand-logo">Pure Reviews</a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
+			<a href="#!" class="brand-logo">Pure Reviews</a>
+			<a href="#" data-activates="mobile-demo" class="button-collapse">
+				<i class="material-icons">menu</i>
+			</a>
+			<ul class="right hide-on-med-and-down">
 				<li>
 					<a href="about.html">About</a>
 				</li>
 				<li>
-					<!-- Modal Trigger -->
-					<a class="waves-effect waves-light modal-trigger" href="#modal1">Sign Up</a>
-					<!-- Modal Structure -->
-					<div id="modal1" class="modal">
-						<div class="modal-content">
-							<h4>Sign Up With and Email Address and Password</h4>
-							<div class="input-field" id="">
-								<input id="email-address" type="text" class="">
-								<label for="email-address">Email Address</label>
-							</div>
-							<div class="input-field" id="">
-								<input id="pw" type="text" class="">
-								<label for="pw">Password</label>
-							</div>
-						</div>
-						<div class="modal-footer">
-							<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sign Up!</a>
-						</div>
-					</div>
+					<a href="">Login</a>
 				</li>
 				<li>
-					<a href="login.html">Login</a>
+					<a href="">
+						<!-- Modal Trigger -->
+						<a class="waves-effect waves-light modal-trigger" href="#modal1" id="navbar-signup">Sign Up</a>
+						<!-- Modal Structure -->
+						<div id="modal1" class="modal">
+							<div class="modal-content">
+								<h4>Sign Up With and Email Address and Password</h4>
+								<div class="input-field" id="">
+									<input id="email-address" type="text" class="">
+									<label for="email-address">Email Address</label>
+								</div>
+								<div class="input-field" id="">
+									<input id="pw" type="password" class="">
+									<label for="pw">Password</label>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sign Up!</a>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul class="side-nav" id="mobile-demo">
+				<li>
+					<a href="">About</a>
+				</li>
+				<li>
+					<a href="">Login</a>
+				</li>
+				<li>
+					<a href="">
+						<!-- Modal Trigger -->
+						<a class="waves-effect waves-light modal-trigger" href="#modal1">Sign Up</a>
+						<!-- Modal Structure -->
+						<div id="modal1" class="modal">
+							<div class="modal-content">
+								<h4>Sign Up With and Email Address and Password</h4>
+								<div class="input-field" id="">
+									<input id="email-address-side" type="text" class="">
+									<label for="email-address">Email Address</label>
+								</div>
+								<div class="input-field" id="">
+									<input id="pw-side" type="text" class="">
+									<label for="pw">Password</label>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sign Up!</a>
+							</div>
+						</div>
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -49,7 +89,7 @@
 		<div class="col s12 top-area">
 			<!-- <img class="header-background" src="assets/img/lake.jpg"> -->
 			<div>
-				<h3 class="info-text">Pricing | Info | Video Reviews. One Place</h3>
+				<h3 class="info-text">Video Reviews | Info | Pricing. All In One Place</h3>
 			</div>
 			<div class="input-field col s6" id="product-search">
 				<input id="video-search" type="text" class="">

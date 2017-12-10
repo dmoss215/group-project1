@@ -66,3 +66,40 @@ $("#video-search").keyup(function (event) {
 //firebase
 //login firebase script
 //user-specific search history script
+
+// old navbar
+
+<nav>
+		<div class="nav-wrapper">
+			<a href="index.html" class="brand-logo">Pure Reviews</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<!-- Modal Trigger -->
+					<a class="waves-effect waves-light modal-trigger" href="#modal1">Sign Up</a>
+					<!-- Modal Structure -->
+					<div id="modal1" class="modal">
+						<div class="modal-content">
+							<h4>Sign Up With and Email Address and Password</h4>
+							<div class="input-field" id="">
+								<input id="email-address" type="text" class="">
+								<label for="email-address">Email Address</label>
+							</div>
+							<div class="input-field" id="">
+								<input id="pw" type="text" class="">
+								<label for="pw">Password</label>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sign Up!</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="login.html">Login</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
