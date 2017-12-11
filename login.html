@@ -13,14 +13,74 @@
 
 <body>
 	<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Pure Reviews</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="about.html">About</a></li>
-        <li><a href="searchhistory.html">Search History</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </div>
+		<div class="nav-wrapper">
+			<a href="index.html" class="brand-logo">Pure Reviews</a>
+			<a href="#" data-activates="mobile-demo" class="button-collapse">
+				<i class="material-icons">menu</i>
+			</a>
+			<ul class="right hide-on-med-and-down">
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="login.html">Login</a>
+				</li>
+				<li>
+					<a href="">
+						<!-- Modal Trigger -->
+						<a class="waves-effect waves-light modal-trigger" href="#modal1" id="navbar-signup">Sign Up</a>
+						<!-- Modal Structure -->
+						<div id="modal1" class="modal">
+							<div class="modal-content">
+								<h4>Sign Up With and Email Address and Password</h4>
+								<div class="input-field" id="">
+									<input id="signup-email" type="text" class="">
+									<label for="signup-email">Email Address</label>
+								</div>
+								<div class="input-field" id="">
+									<input id="signup-pw" type="password" class="">
+									<label for="signup-pw">Password</label>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="signup-button">Sign Up!</a>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul class="side-nav" id="mobile-demo">
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="login.html">Login</a>
+				</li>
+				<li>
+					<a href="">
+						<!-- Modal Trigger -->
+						<a class="waves-effect waves-light modal-trigger" href="#modal2">Sign Up</a>
+						<!-- Modal Structure -->
+						<div id="modal2" class="modal">
+							<div class="modal-content">
+								<h4>Sign Up With and Email Address and Password</h4>
+								<div class="input-field" id="">
+									<input id="email-address-side" type="text" class="">
+									<label for="email-address">Email Address</label>
+								</div>
+								<div class="input-field" id="">
+									<input id="pw-side" type="text" class="">
+									<label for="pw">Password</label>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sign Up!</a>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</nav>
 	
 			<div class="row jumbo">
