@@ -1,7 +1,7 @@
 //ebay
 $("#submit-button").on("click", function(e) {
 		e.preventDefault();
-
+		
 		var productSearch = $("#video-search").val().trim();
 		var myAppID = "MichaelD-CodingBo-PRD-b51ca6568-036a5a77"	
 		// decalare a variable to our API so we can call it with AJAX later
