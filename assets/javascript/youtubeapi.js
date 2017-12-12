@@ -24,7 +24,7 @@ $("#submit-button").on("click", function () {
 			let iframe = $("<iframe>");
 			iframe.attr("src", "https://www.youtube.com/embed/" + video);
 			iframe.attr("frameboarder", "0");
-			iframe.attr("width", "580");
+			iframe.attr("width", "auto");
 			iframe.attr("height", "320");
 
 			console.log(iframe);
@@ -33,6 +33,7 @@ $("#submit-button").on("click", function () {
 		}
 
 	});
+	$("#video-search").val("");
 });
 
 // Enable enter key to do the same as clicking search button 

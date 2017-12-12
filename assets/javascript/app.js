@@ -20,13 +20,13 @@ $(function() {
 	// 	database.push()
 	// });
 
-// =====  Modal Open =============
+// =====  Sign Up Modal Open =============
 $('.modal').modal();
 
 // ===== Collapse Navbar ========
 $(".button-collapse").sideNav();
 
-
+// ====== Sign Up Firebase Authentication ==============================
 $("#signup-button").on('click', function () { 
 	console.log("sign up button worked");
 	email = $("#signup-email").val().trim();
