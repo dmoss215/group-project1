@@ -1,6 +1,7 @@
 // ================  ajax call for youtube ==================================================
 $("#submit-button").on("click", function () {
-	console.log("button click worked");
+	$("#youtube-results").empty();
+
 	let productSearch = $("#video-search").val().trim();
 	let reviewSearch = productSearch + " " + "review";
 	console.log(reviewSearch);
