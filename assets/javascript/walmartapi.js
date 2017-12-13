@@ -6,12 +6,14 @@ $("#submit-button").on("click", function(e)
 		var productSearch = $("#video-search").val().trim();
 		var myAppID = "rxyfmndsnehbbka79qrqbs84"	
 		// decalare a variable to our API so we can call it with AJAX later
-		var queryUrl ='http://api.walmartlabs.com/v1/search?apiKey=' + myAppID + '&query=' + productSearch;
+		var queryUrl ='http://api.walmartlabs.com/v1/search?apiKey=' + myAppID + '&query=' + productSearch + '&format=json&callback=callbackname';
 
 		//make an AJAX request to queryURL using HTTP GET
 		$.ajax({
 		  url: queryUrl,
-		  method: "GET"
+		  method: "GET",
+		  dataType: 'jsonp',
+		  jsonp: 'callbackname'
 		})
 		.done(function(response) {
 		  //append to ebay column
