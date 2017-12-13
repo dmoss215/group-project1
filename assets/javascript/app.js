@@ -48,26 +48,10 @@ firebase.auth().onAuthStateChanged(function(user) {
  window.user = user; // user is undefined if no user signed in
 });
 
-$('#signup').on('click', function(){
-
-	console.log(emailOffered);
-	firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-  	// Handle Errors here.
-  	email = emailOffered;
-  	password = passwordOffered;
-  	var errorCode = error.code;
-  	var errorMessage = error.message;
-	  // ...
-	console.log(email);
-	
-	});	
-});	
 
 $('#login-button').on('click', function(){
 	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
   	// Handle Errors here.
-  	email = emailOffered;
-  	password = passwordOffered;
   	var errorCode = error.code;
   	var errorMessage = error.message;
   	// ...
