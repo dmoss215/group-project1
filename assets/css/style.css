@@ -3,6 +3,10 @@
     width: 100%;
 }
 
+body{
+    background-image: url(../img/spiration-light.png);
+}
+
 .top-area {
     background-color: #b4ddc5;
     height: 400px;
@@ -34,6 +38,21 @@
     background-color: #abcdef;
 }
 
+#ebay-result, #youtube-results{
+    max-width: 45%;
+    display: block;
+    align-content: center;
+    background-color: rgba(221, 221, 221, .35);
+    text-align: center;
+    border: 2px solid #ccc;
+    margin: 20px;
+    visibility: hidden;
+    padding: 50px;
+}
+
+.ebayPic{
+    border: 2px solid #fff;
+}
 /* .container {
     margin-left: 0px;
     margin-right: 0px;
