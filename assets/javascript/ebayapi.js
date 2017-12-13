@@ -20,7 +20,7 @@ $("#submit-button").on("click", function(e)
 		  //append to ebay column
 			console.log(response);
 
-		  	for (var i = 0; i < 10; i++) 
+		  	for (var i = 0; i < 4; i++) 
 		  	{
 				if(response.Product[i].DisplayStockPhotos === true) 
 				{
