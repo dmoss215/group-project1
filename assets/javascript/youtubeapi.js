@@ -1,6 +1,7 @@
 // ================  ajax call for youtube ==================================================
 $("#submit-button").on("click", function () {
 	$("#youtube-results").empty();
+	$("#youtube-results").css('visibility', 'visible');
 
 	let productSearch = $("#video-search").val().trim();
 	let reviewSearch = productSearch + " " + "review";
