@@ -53,11 +53,6 @@ $("#signup-button").on('click', function () {
 	  $("#signup-pw").val("");
  })
 
-//firebase authentication
-// var email;
-// var password;
-// var emailOffered = $("#email-address").val().trim();
-// var passwordOffered = $('#password-input').val().trim();
 
 //firebase auth listener
 firebase.auth().onAuthStateChanged(function(user) {
