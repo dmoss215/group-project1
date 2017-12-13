@@ -16,7 +16,7 @@ $(function() {
 	$('#submit-button').on('click', function(event) {
 		event.preventDefault();
 
-		database.push()
+		database.push();
 	 });
 
 // =====  Sign Up Modal Open =============
@@ -48,12 +48,16 @@ firebase.auth().onAuthStateChanged(function(user) {
  window.user = user; // user is undefined if no user signed in
 
 $('#login-button').on('click', function(){
+	console.log("login button clicked");
+	let email = $("#email-input").val().trim();
+	let password = $("#password-input").val().trim();
 	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
   	// Handle Errors here.
   	var errorCode = error.code;
   	var errorMessage = error.message;
   	// ...
 	});
+	console.log(firebase.auth().currentUser);
 });
 
 	$('#signOut-button').on('click', function () {
