@@ -50,6 +50,10 @@ body{
     padding: 50px;
 }
 
+.logo{
+    max-width: 100%
+}
+
 .ebayPic{
     border: 2px solid #fff;
 }

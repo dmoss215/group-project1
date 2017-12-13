@@ -4,6 +4,10 @@ $("#submit-button").on("click", function(e)
 		e.preventDefault();
 		$('#ebay-result').empty()
 		$('#ebay-result').css('visibility', 'visible');
+		var ebayHeader= $('<img>');
+		ebayHeader.attr('src', 'http://www.bbqsaucereviews.com/wp-content/uploads/2011/09/ebay-528x219.png');
+		ebayHeader.attr('class', 'logo');
+		$('#ebay-result').prepend(ebayHeader)
 
 		var productSearch = $("#video-search").val().trim();
 		var myAppID = "MichaelD-CodingBo-PRD-b51ca6568-036a5a77"	
@@ -25,6 +29,7 @@ $("#submit-button").on("click", function(e)
 		  	{
 				if(response.Product[i].DisplayStockPhotos === true) 
 				{
+					
 					var ebayPic = $('<img>');
 					ebayPic.attr('src', response.Product[i].StockPhotoURL);
 					// ebayPic.attr('height', '200px')

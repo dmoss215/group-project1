@@ -2,6 +2,10 @@
 $("#submit-button").on("click", function () {
 	$("#youtube-results").empty();
 	$("#youtube-results").css('visibility', 'visible');
+	var youTubeHeader= $('<img>');
+		youTubeHeader.attr('src', 'http://learn.corel.com/wp-content/uploads/2016/09/YouTube-logo-banner-600x251.png');
+		youTubeHeader.attr('class', 'logo');
+		$('#youtube-results').prepend(youTubeHeader);
 
 	let productSearch = $("#video-search").val().trim();
 	let reviewSearch = productSearch + " " + "review";
