@@ -16,7 +16,7 @@ $(function() {
 	$('#submit-button').on('click', function(event) {
 		event.preventDefault();
 
-		database.push();
+		database.ref().push();
 	 });
 
 // =====  Sign Up Modal Open =============
