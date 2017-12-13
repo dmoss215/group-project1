@@ -51,11 +51,23 @@ $('#login-button').on('click', function(){
 	console.log("login button clicked");
 	let email = $("#email-input").val().trim();
 	let password = $("#password-input").val().trim();
+	
 	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
   	// Handle Errors here.
   	var errorCode = error.code;
   	var errorMessage = error.message;
   	// ...
+	});
+
+	var user = firebase.auth().currentUser;
+	
+	user.updateProfile({
+	  displayName: "Jane Q. User",
+
+	}).then(function() {
+	  // Update successful.
+	}).catch(function(error) {
+	  // An error happened.
 	});
 	console.log(firebase.auth().currentUser);
 });
