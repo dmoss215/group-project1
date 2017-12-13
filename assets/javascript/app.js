@@ -1,9 +1,6 @@
 $(function() {
 
-<<<<<<< HEAD
-=======
 	//Initialize Firebase
->>>>>>> 97297c908633db351ba1e023048775205c3adce4
 	var config = {
 		apiKey: "AIzaSyCUE8vxN9tFrV5spAnE3AvkWPYNA-ai24k",
 	    authDomain: "group-project-1-f1ac1.firebaseapp.com",
@@ -16,18 +13,10 @@ $(function() {
 
 	var database = firebase.database();
 
-<<<<<<< HEAD
 	$('#submit-button').on('click', function(event) {
 		event.preventDefault();
 
 		database.push()
-=======
-//create onclick event to log search history to firebase
-	// $('#submit-button').on('click', function(event) {
-	// 	event.preventDefault();
-
-	// 	database.push()
->>>>>>> 97297c908633db351ba1e023048775205c3adce4
 	 });
 
 // =====  Sign Up Modal Open =============
