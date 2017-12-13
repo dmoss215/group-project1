@@ -46,8 +46,6 @@ $("#signup-button").on('click', function () {
 //firebase auth listener
 firebase.auth().onAuthStateChanged(function(user) {
  window.user = user; // user is undefined if no user signed in
-});
-
 
 $('#login-button').on('click', function(){
 	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
@@ -66,7 +64,7 @@ $('#login-button').on('click', function(){
 	  	// ...
 		});
 	});
-
+});
 
 	$("#submit-button").on("click", function (event){
        event.preventDefault();
