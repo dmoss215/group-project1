@@ -26,9 +26,12 @@ $(function() {
 	
 	database.ref("/Trending").push(newSearch);
 
-	database.ref().on("child_added", function (childSnapshot) {
-		let addedSearch = childSnapshot.val();
-
+	// database.ref("/Trending").on("child_added", function (childSnapshot) {
+	// 	let addedSearch = childSnapshot.val();
+	// 	let trendingDiv = $("<div>");
+	// 	trendingDiv.text(addedSearch);
+	// 	console.log(trendingDiv);
+	// 	$("#trending-products").append(trendingDiv);
 
 	});
 
