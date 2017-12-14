@@ -1,5 +1,6 @@
 // ================  ajax call for youtube ==================================================
-$("#submit-button").on("click", function () {
+$("#submit-button").on("click", function (event) {
+	event.preventDefault();
 	$("#youtube-results").empty();
 	$("#youtube-results").css('visibility', 'visible');
 	var youTubeHeader= $('<img>');
@@ -38,7 +39,7 @@ $("#submit-button").on("click", function () {
 		}
 
 	});
-	$("#video-search").val("");
+	
 });
 
 // Enable enter key to do the same as clicking search button 

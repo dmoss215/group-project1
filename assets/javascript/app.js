@@ -16,8 +16,27 @@ $(function() {
 	$('#submit-button').on('click', function(event) {
 		event.preventDefault();
 
-		database.ref().push();
-	 });
+		// =========  Trending Searches ================================
+	let newSearch = $("#video-search").val().trim();
+	console.log($("#video-search"))
+	console.log(newSearch);
+	database.ref("/Trending").set({      
+  Search: newSearch, 
+	});
+	
+	database.ref("/Trending").push(newSearch);
+
+	// database.ref("/Trending").on("child_added", function (childSnapshot) {
+	// 	let addedSearch = childSnapshot.val();
+	// 	let trendingDiv = $("<div>");
+	// 	trendingDiv.text(addedSearch);
+	// 	console.log(trendingDiv);
+	// 	$("#trending-products").append(trendingDiv);
+
+	});
+
+	$("#video-search").val("");
+});
 
 // =====  Sign Up Modal Open =============
 $('.modal').modal();
@@ -36,6 +55,8 @@ $("#signup-button").on('click', function () {
 		// Handle Errors here.
 		var errorCode = error.code;
 		var errorMessage = error.message;
+
+
 		// ...
 	  });
 	  $("#signup-email").val("");
@@ -53,26 +74,40 @@ $('#login-button').on('click', function(){
 	let password = $("#password-input").val().trim();
 	
 	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-  	// Handle Errors here.
+		// Handle Errors here.
+		var user = firebase.auth().currentUser;
+		var userUID = user.uid;
+		console.log(userUID);
+		if (user) {
+			console.log(userUID);
+			database.ref("/Users").push(userUID);
+		}
   	var errorCode = error.code;
   	var errorMessage = error.message;
   	// ...
 	});
 
-	var user = firebase.auth().currentUser;
-	
-	user.updateProfile({
-	  displayName: "Jane Q. User",
 
-	}).then(function() {
-	  // Update successful.
-	}).catch(function(error) {
-	  // An error happened.
-	});
+
+	// console.log("Sign-in provider: " + profile.providerId);
+	// console.log("  Provider-specific UID: " + profile.uid);
+	// console.log("  Name: " + profile.displayName);
+	// console.log("  Email: " + profile.email);
+
+
+	// user.updateProfile({
+	//   displayName: "Jane Q. User",
+
+	// }).then(function() {
+	//   // Update successful.
+	// }).catch(function(error) {
+	//   // An error happened.
+	// });
 	console.log(firebase.auth().currentUser);
 });
 
-	$('#signOut-button').on('click', function () {
+	$('#sign-out').on('click', function () {
+		console.log("signed out")
 		firebase.auth().signOut().catch(function (error) {
 		// Handle errors here
 		var errorCode = error.code;
@@ -81,36 +116,45 @@ $('#login-button').on('click', function(){
 		});
 	});
 });
+// ==== END GET CURRENT SIGNED IN USER WITH onAuthStateChanged =======================================
 
-	$("#submit-button").on("click", function (event){
-       event.preventDefault();
+
+
+
+
+
+
+
+
+// 	$("#submit-button").on("click", function (event){
+//        event.preventDefault();
   
-      // Values input in text boxes.
-      var prodSearch = $("#video-search").val().trim();
-      console.log(prodSearch);
-      // Code for "Setting values in the database"
-      database.ref().set({
+//       // Values input in text boxes.
+//       var prodSearch = $("#video-search").val().trim();
+//       console.log(prodSearch);
+//       // Code for "Setting values in the database"
+//       database.ref().set({
         
-      prodSearch: prodSearch 
-  });
+//       prodSearch: prodSearch 
+//   });
 
-});
+// });
 //===========================================================================================
     // Firebase watcher + initial loader HINT: .on("value")
-    database.ref().on("value", function(snapshot) {
+    // database.ref().on("value", function(snapshot) {
 
-      // Log snapshot
-      //console.log(snapshot.val());
-      console.log(snapshot.val());
+    //   // Log snapshot
+    //   //console.log(snapshot.val());
+    //   console.log(snapshot.val());
 
 
-      // Change the HTML to reflect
-      $("#video-search").text(snapshot.val().prodSearch);
+    //   // Change the HTML to reflect
+    //   $("#video-search").text(snapshot.val().prodSearch);
 
-      // Handle the errors
-    }, function(errorObject) {
-      console.log("Errors handled: " + errorObject.code);
-    });
+    //   // Handle the errors
+    // }, function(errorObject) {
+    //   console.log("Errors handled: " + errorObject.code);
+    // });
  
 
 });
