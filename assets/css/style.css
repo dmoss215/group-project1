@@ -19,6 +19,7 @@ body{
 }
 
 .info-text {
+    font-family: 'Antic Slab', serif;
     color: white;
     position: absolute;
     top: 30%;
